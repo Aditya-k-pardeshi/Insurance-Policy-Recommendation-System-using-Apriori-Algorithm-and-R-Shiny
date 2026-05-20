@@ -1,49 +1,106 @@
-# Insurance-Policy-Recommendation-System-using-Apriori-Algorithm-and-R-Shiny
-End-to-end insurance recommendation system built during internship at Bajaj Allianz Life Insurance
+# Insurance Policy Recommendation System using R Shiny
 
-# Overview
-This project is an intelligent insurance recommendation system developed using R Shiny and the Apriori algorithm. The application analyzes customer demographic and financial information to recommend suitable insurance policy terms.
+## Overview
+This project is an intelligent insurance recommendation system developed using R Shiny and the Apriori Algorithm. The system analyzes customer demographic and financial information to recommend suitable insurance policies.
 
-# Problem Statement
-Insurance companies need intelligent systems to recommend suitable policies and estimate customer risk based on demographic and financial factors. Traditional recommendation approaches are often manual and less personalized. This project develops an automated insurance recommendation system using association rule mining and R Shiny to identify relationships between customer characteristics and insurance policy preferences.
+---
 
-# Key Features
-Built interactive dashboard using RStudio and Shiny.
-Implemented Apriori algorithm for association rule mining.
-Generated insurance recommendations based on customer attributes.
-Added EDA visualizations and filtering system.
-Processed large insurance datasets (300MB support).
+## Features
+- Interactive R Shiny Dashboard
+- Insurance Policy Recommendation System
+- Association Rule Mining using Apriori Algorithm
+- Exploratory Data Analysis (EDA)
+- Dynamic Customer Filtering
+- Synthetic Insurance Dataset Generation
+- Recommendation Ranking using Confidence and Lift
 
-# Technologies Used
-R
-Shiny
-arules
-dplyr
-ggplot2
+---
 
-Dataset
+## Technologies Used
+- R Programming
+- Shiny
+- dplyr
+- arules
+- ggplot2
 
-# Synthetic dataset containing:
-age
-gender
-declared_income
-premium_term
-policy_term
-booking_frequency
-policy_type
-current_status
+---
 
-# How to run
-install.packages(c("shiny","dplyr","arules"))
-shiny::runApp()
+## Dataset Features
+The dataset contains:
+- Age
+- Gender
+- Declared Income
+- Premium Term
+- Policy Term
+- Booking Frequency
+- Policy Type
+- Customer Status
+- Premium Amount
 
-# Recommendation Logic
-The system uses association rule mining to discover relationships between:
-Premium Term
-Policy Term
-Policy Type
-Customer Demographics
+---
 
-# Sample rules
-premium_term=10 => policy_term=20
-premium_term=20 => policy_type=Endowment
+## Recommendation Logic
+The system applies the Apriori Algorithm to discover hidden relationships between:
+- Premium Term
+- Policy Term
+- Policy Type
+- Customer Demographics
+
+Example Rule:
+
+```text
+premium_term=10 => policy_term=30
+```
+
+---
+
+## Dashboard
+
+![Dashboard](screenshots/Dashboard.png)
+
+---
+
+## Data Summary
+
+![Data Summary](screenshots/Data_Summary.png)
+
+---
+
+## Recommendations
+
+![Recommendations](screenshots/Recommendations.png)
+
+---
+
+## How to Run
+
+Install required packages:
+
+```r
+install.packages(c(
+  "shiny",
+  "dplyr",
+  "arules",
+  "ggplot2"
+))
+```
+
+Run the application:
+
+```r
+shiny::runApp("model/R_shiny_app.R")
+```
+
+---
+
+## Future Improvements
+- Machine Learning based premium prediction
+- Hybrid recommendation system
+- User authentication
+- Cloud deployment
+- Interactive analytics dashboard
+
+---
+
+## Author
+Aditya Pardeshi
